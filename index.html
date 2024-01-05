@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Perfil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="nav-title" onclick="hicimos_click(this)">Profile</h1>
+            <ul class="nav-links">
+                <li><a href="#" onclick="cambiar_texto(this)">Home</a></li>
+                <li><a href="#" class="active" onclick="cambiar_texto(this)">My Profile</a></li>
+                <li><a href="#" onclick="cambiar_texto(this)">Find Connections</a></li>
+                <li><button class="btn" onclick="cerrar_sesion()">Sign Out</button></li>
+            </ul> 
+        </nav> 
+    </header>
+    <div class="container">
+        <div class="left-container">
+            <div class="left-box">
+                <div class="card-header">
+                    <img onmouseover="mouse_dentro(this)" onmouseout="mouse_fuera(this)" src="images/jane-m.jpg" alt="Jane" class="jane-pic">
+                </div>
+                <div class="card-body">
+                    <h1 id="name">Jane Doe</h1>
+                    <h3 class="location">
+                        <img src="icons/map-marker.png" alt="mapa" class="icon">Seattle
+                    </h3>
+                    <p>Developer | Engineer | Problem Solver <br> Master of shadows and the internet!</p>
+                    <a href="#" onclick="editar_perfil()">
+                        <img src="icons/gear.png"  alt="tuerca" class="icon"> edit profile
+                    </a> 
+                </div>
+
+            </div>
+            <div class="left-box">
+                <div class="edu-header">
+                    <h4>Education</h4>
+                </div>
+                <div class="edu-body">
+                    <h2>Coding Dojo - Full Stack Bootcamp
+                    </h2>
+                    <h4> Dec 2019 - Mar 2020</h4>
+                    <p>Triple black belt in Python, MERN, and C#...
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="right-box" >
+                <div class="conn-header">
+                    <h4> <span class="circulo1"> 2 </span> Connection Requests</h4>
+                </div>
+                <div>
+                    <ul class="solicitud">
+                        <li id="dila_todd">
+                            <img src="images/todd-s.jpg" alt="todd" class="small-pic">    Todd E
+                            <img src="icons/accept-circle.png" alt="accept" class="icon2">
+                            <img   ondblclick="eliminar(this)" src="icons/close-circle.png" alt="deny" class="icon2">
+                        </li>
+                        <li>
+                            <img src="images/phil-s.jpg" alt="phill" Class="small-pic">   Phill K
+                            <img src="icons/accept-circle.png" alt="accept" class="icon2">
+                            <img ondblclick="eliminar(this)" onclick="eliminar_persona()" src="icons/close-circle.png" alt="deny" class="icon2">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-box">
+                <div class="conn-header">
+                    <h4><span class="circulo2">500+</span> Your Connections</h4>
+                </div>
+                <div>
+                    <ul class="connections">
+                        <li>
+                            <img src="images/adrien-s.jpg" alt="adrien" class="small-pic">
+                            Adrien D</li>
+                        <li>
+                            <img src="images/anne-s.jpg" alt="anne" class="small-pic">
+                            Anne j</li>
+                        <li>
+                            <img src="images/alayne-s.jpg" alt="alayne" class="small-pic">
+                            Alayne T </li>
+                        <li>
+                            <img src="images/arry-s.jpg"  alt="Arry" class="small-pic">
+                            Arry Y</li>
+                    </ul>
+                    <div class="v-more">
+                        <a href="#"> View More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="JavaScript/script.js" ></script>
+</body>
+</html>
